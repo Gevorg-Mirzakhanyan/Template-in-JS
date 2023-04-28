@@ -1,0 +1,153 @@
+@fontWeight: normal;
+@colorGrey: #444;
+@colorWhite: #ddd;
+@colorBorder: #2f223a;
+@fontSize: 16px;
+@margin: 30px;
+@listType: none;
+@borderRadius: 4px;
+
+body {
+    font-family: Tahoma;
+    color: @colorGrey;
+    letter-spacing: 1px;
+}
+
+.title {
+    font-weight: @fontWeight;
+}
+
+
+#wrapper {
+    width: 90%;
+    max-width: 960px;
+    margin: 20px auto;
+    border-radius: 6px;
+    box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    padding: 0 0 20px;
+    overflow: hidden;
+    border: 1px solid lightgray;
+}
+
+#page-banner {
+    background: #eee ;
+    padding: 10px 0;
+    h1, p {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        input {
+            width: 90%;
+            max-width: 300px;
+            margin: 20px auto;
+            display: flex;
+            padding: 8px;
+            border: 1px solid @colorWhite;
+            border-radius: @borderRadius;
+            font-size: @fontSize;
+            color: @colorGrey;
+        }
+    }
+}
+
+#book-list {
+    margin: @margin;
+    ul {
+        list-style-type: @listType;
+        padding: 0;
+        li {
+            padding: 20px;
+            border-left: 5px solid @colorWhite;
+            margin: 20px 10px;
+            &:hover {
+                border-color: @colorBorder;
+            }
+        } 
+    }
+}
+
+.delete {
+    float: right;
+    background: @colorBorder;
+    padding: 6px;
+    border-radius: @borderRadius;
+    cursor: pointer;
+    color: white;
+    .delete:hover {
+        background: #333;
+    }
+}
+
+#add-book {
+    width: 400px;
+    margin: 0 auto;
+    margin: @margin;
+    &:after {
+        content: '';
+        display: flex;
+        clear: both;
+    }
+    input {
+        display: flex;
+        margin: 20px 0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        font-size: @fontSize;
+        border-radius: 4px 0 0 4px;
+        box-sizing: border-box;
+        width: 300px;
+        float: left;
+        clear: both;
+        button {
+            border: 1px solid @colorBorder;
+            background: @colorBorder;
+            padding: 10px 20px;
+            font-size: @fontSize;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            width: 100px;
+            margin: 20px 0;
+            border-left: 0;
+            color: white;
+            #hide {
+                    width: 30px;
+                    label {
+                        line-height: 52px;
+                    }
+
+                }
+            }
+        }
+    }
+
+
+#tabbed-content {
+    margin: @margin;
+    li {
+        display: flex;
+        padding: 10px 14px;
+        background: @colorWhite;
+        border-radius: @borderRadius;
+        cursor: pointer;
+        margin-right: 10px;
+        ul {
+            list-style-type: @listType;
+            padding: 0;
+            .panel {
+                display: none;
+                border: 1px solid @colorWhite;
+                padding: 0 10px;
+                border-radius: @borderRadius;
+                .panel.active {
+                    display: flex;
+                }
+            }
+       
+         }
+    }
+
+}
