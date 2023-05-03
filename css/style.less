@@ -37,7 +37,8 @@ body {
         width: 100%;
         text-align: center;
         margin: 10px 0;
-        input {
+        }
+    input {
             width: 90%;
             max-width: 300px;
             margin: 20px auto;
@@ -47,7 +48,6 @@ body {
             border-radius: @borderRadius;
             font-size: @fontSize;
             color: @colorGrey;
-        }
     }
 }
 
@@ -80,16 +80,11 @@ body {
 }
 
 #add-book {
+    
     width: 400px;
     margin: 0 auto;
-    margin: @margin;
-    &:after {
-        content: '';
-        display: flex;
-        clear: both;
-    }
     input {
-        display: flex;
+        display: block;
         margin: 20px 0;
         padding: 10px;
         border: 1px solid #ccc;
@@ -97,34 +92,40 @@ body {
         border-radius: 4px 0 0 4px;
         box-sizing: border-box;
         width: 300px;
-        float: left;
         clear: both;
-        button {
-            border: 1px solid @colorBorder;
-            background: @colorBorder;
-            padding: 10px 20px;
-            font-size: @fontSize;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            border-radius: 0 4px 4px 0;
-            cursor: pointer;
-            width: 100px;
-            margin: 20px 0;
-            border-left: 0;
-            color: white;
-            #hide {
-                    width: 30px;
-                    label {
-                        line-height: 52px;
-                    }
-
-                }
-            }
-        }
+        float: left;
     }
-
-
+    button {
+        border: 1px solid @colorBorder;
+        background: @colorBorder;
+        padding: 10px 20px;
+        font-size: @fontSize;
+        display: flex;
+        margin: 0;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+        width: 100px;
+        margin: 20px 0;
+        border-left: 0;
+        color: white;
+    }
+    &:after {
+            content: '';
+            display: block;
+            clear: both;
+    }
+    #hide {
+            width: 30px;
+          
+    }
+    label {
+            line-height: 52px;
+            display: flex;
+            }
+}
+            
+        
+    
 #tabbed-content {
     margin: @margin;
     li {
@@ -146,8 +147,7 @@ body {
                     display: flex;
                 }
             }
-       
-         }
+        }
     }
-
 }
+

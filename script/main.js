@@ -43,4 +43,31 @@ const handleDeleteBook = event => {
 ulList.addEventListener('click', handleDeleteBook)
 
 
-//--------------------------------------------------------
+//add hide fanctional
+
+const handleHideBooks = event => {
+    const { target } = event;
+    // if (target.checked) {
+    //     ulList.style.display = 'none'
+    // } else {
+    //     ulList.style.display = 'block'
+    // }
+
+    ulList.style.display = target.checked ? 'none' : 'block';
+}
+
+hideBox.addEventListener('input', handleHideBooks);
+
+
+// add search fanctional
+
+const handleSearch = element => {
+    let currentValue = element.target.value.toLowerCase();
+    let autors = document.querySelectorAll('ul, li');
+    autors.forEach(autor => {
+        autor.style.display = (autor.textContent.toLowerCase().includes(currentValue)) ? 'block' : 'none';
+    })
+ }
+ 
+ searchInput.addEventListener('keyup', handleSearch);
+
